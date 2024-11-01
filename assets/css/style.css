@@ -1,0 +1,429 @@
+/* Reseteo de estilos */
+* {
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto total del elemento */
+    font-family: 'Monserrat', sans-serif; /* Establece la fuente a 'Monserrat', con 'sans-serif' como alternativa */
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+    background: url("../img/fondos/1.jpg"); /* Establece una imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el área del body, manteniendo su proporción */
+    background-attachment: fixed; /* La imagen de fondo se mantiene fija al hacer scroll */
+    background-repeat: no-repeat; /* Evita que la imagen se repita si no cubre toda el área */
+    color: #362b04;
+   
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana del navegador */
+    padding: 0 20px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(219, 113, 13, 0.185); /* Un overlay blanco semitransparente para suavizar la imagen */
+    pointer-events: none; /* Permite interactuar con el contenido normalmente */
+}
+
+.form-container{
+    display: flex;
+    max-width: 980px; /* Asegúrate de que se ajuste al tamaño de la pantalla */
+
+
+    width: 80%; /* En lugar de 1000px, usa un porcentaje */
+
+    
+    height: 560px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+}
+
+
+
+.col-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 55%;
+    background: rgba(236, 136, 55, 0.438);
+    backdrop-filter: blur(30px);
+    border-radius: 0 30% 20% 0;
+}
+
+.image-layer{
+    position: relative;
+}
+
+.form-image{
+    width: 400px;
+    position: absolute;
+    left: 0;
+    width: 400px;
+}
+
+.featured-words{
+    text-align: center;
+    color: #fff;
+    width: 300px;
+}
+.featured-words span{
+    font-weight: 600;
+    color: #1D1314;
+}
+
+.col-2{
+    position: relative;
+    width: 450px;
+    padding: 20px;
+    overflow: hidden;
+}
+.btn-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.btn{
+    font-weight: 500;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(192, 125, 23, 0.459);
+    color: #ffffff;
+    box-shadow: 0 5px 10px rgb(73, 51, 8);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-1 {
+    background: #be6115;
+}
+
+.btn-2 {
+    background: #68350c;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-inactive {
+    opacity: 0.5; /* O el color que prefieras para indicar que está inactivo */
+}
+
+/* Login Form */
+.login-form{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 4vw;
+    transition: .3s;
+}
+
+/* Register Form */
+.register-form{
+    position: absolute;
+    left: -50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 4vw;
+    transition: .3s;
+}
+.register-form .form-title{
+    margin-block: 40px 20px;
+    font-size: 2rem; /* Usa rem para un mejor escalado en diferentes tamaños */
+
+}
+.form-title {
+    margin: 40px 0;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center; /* Centrar el texto, opcional */
+}
+
+.form-title span {
+    display: inline-block; /* Asegura que se pueda aplicar transformaciones */
+    animation: wave 1.5s infinite; /* Añadir la animación de ola */
+}
+
+/* Efecto de movimiento en ola */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0); /* Posición original */
+    }
+    20% {
+        transform: translateY(-4px); /* Sube ligeramente */
+    }
+    40% {
+        transform: translateY(3px); /* Baja ligeramente */
+    }
+    60% {
+        transform: translateY(-4px); /* Sube nuevamente */
+    }
+    80% {
+        transform: translateY(3px); /* Baja nuevamente */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.form-inputs{
+    width: 90%;
+}
+.input-box{
+    position: relative;
+}
+.input-field{
+    width: 100%;
+    height: 55px;
+    padding: 0 15px;
+    margin: 10px 0;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.123);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+::placeholder{
+    color: #fff;
+    font-size: 15px;
+}
+.input-box .icon{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.input-submit {
+    position: relative; /* Para que el efecto de elevación funcione correctamente */
+    background-color: #be6115; /* Color de fondo inicial */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+}
+
+.input-submit:hover {
+    transform: translateY(-5px); /* Elevar el botón */
+    background-color: #9a4e12; /* Cambiar el color de fondo al pasar el mouse */
+}
+
+.input-field:focus {
+    background-color: rgba(235, 145, 61, 0.384); /* Fondo iluminado al seleccionar */
+}
+.forgot-pass{
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+.forgot-pass a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.forgot-pass a:hover{
+    text-decoration: underline;
+}
+.input-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 55px;
+    padding: 0 15px;
+    margin: 10px 0;
+    color: #fff;
+    background: #6d310a;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: .3s;
+}
+.input-submit:hover{
+    gap: 15px;
+}
+
+
+.social-login{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.social-login i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: .2s;
+}
+.social-login button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: .2s;
+}
+.social-login i:hover {
+    /* Cambia el color o aplica una sombra al pasar el ratón */
+    filter: brightness(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 892px){
+    .form-container{
+        width: 400px;
+    }
+    .col-1{
+        display: none;
+    }
+    .col-2{
+        width: 100%;
+        width: 100%;
+        padding: 10px; /* Ajusta el padding si es necesario */
+    }
+
+    
+}
+
+#postRegisterSection {
+    background-color: #f9f9f9; /* Color de fondo claro */
+    border: 2px solid #e0e0e0; /* Bordes sutiles */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 20px; /* Espacio superior */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#postRegisterSection h4 {
+    font-family: 'Garamond', serif; /* Fuente elegante */
+    color: #333; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.btn {
+    font-size: 16px; /* Tamaño de fuente */
+    font-family: 'Arial', sans-serif; /* Fuente de los botones */
+    border-radius: 6px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para los botones */
+}
+
+.btn-info {
+    background-color: #17a2b8; /* Color de fondo */
+    color: white; /* Color del texto */
+}
+
+.btn-success {
+    background-color: #28a745; /* Color de fondo */
+    color: white; /* Color del texto */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Levantar el botón al pasar el ratón */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+}
+
+.image-layer {
+    display: flex; /* Usamos flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Apila las imágenes en una columna si hay varias */
+    height: 100%; /* Asegúrate de que el contenedor tenga altura */
+}
+
+.form-image {
+    max-width: 100%; /* Asegúrate de que las imágenes no excedan el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+@keyframes fly {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(calc(100vw - 100px), 50px); }
+    50% { transform: translate(calc(100vw - 100px), 100vh); }
+    75% { transform: translate(0, 50px); }
+    100% { transform: translate(0, 0); }
+}
+
+#crow {
+    animation: fly 5s linear infinite; /* Ajusta la duración y tipo de animación según tus preferencias */
+}
+
+#crow-container {
+    position: fixed; /* O usa 'absolute' si quieres que se mueva con el scroll */
+    top: 10px; /* Ajusta la posición vertical según lo desees */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Centrar usando transform */
+    z-index: 9999; /* Asegúrate de que el cuervo esté encima de otros elementos */
+    pointer-events: none; /* Evita que el cuervo interfiera con los clics en otros elementos */
+}
+
+
+/* Clase para el efecto de difuminado */
+.fade-in {
+    opacity: 0; /* Comienza completamente transparente */
+    transition: opacity 0.5s ease-in-out; /* Cambia la duración a 0.5 segundos */
+}
+
+/* Clase que se aplicará al finalizar el difuminado */
+.fade-in-active {
+    opacity: 1; /* Se vuelve completamente visible */
+}
+
+
+#accedeGoogle {
+    font-size: 18px; /* Ajustar el tamaño de la fuente */
+    transition: color 0.3s ease; /* Efecto de transición para cambios de color */
+    align-items: center;
+    text-align: center;
+    padding-top: 8px;
+   
+}
+

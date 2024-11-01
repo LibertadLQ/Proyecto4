@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia de asignación</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="icon" href="../img/index.png" type="image/png"> <!-- Ruta al favicon PNG -->
+    <link rel="stylesheet" href="../css/trivia.css">
+</head>
+<body>
+
+    <div class="overlay">  
+        <div class="container mt-5">
+            <div class="text-center magic-background">
+                <h1 class="text-center">Trivia de Casas</h1>
+                <p class="text-center">Responde las siguientes preguntas y descubre a qué casa perteneces.</p>
+            </div>
+            <!-- Contenedor de preguntas -->
+            <div id="triviaContainer">
+                <!-- Pregunta 1 -->
+                 <!-- Pregunta 1 -->
+                <div class="form-group pregunta">
+                    <label id="preguntaTrivia">¿Qué valor es más importante para ti?</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option1').checked = true;">
+                                <input type="radio" name="q1" value="athena" id="option1" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-lightbulb card-img-top responsive-icon" style="font-size: 50px;" title="Innovación"></i>
+                                    <h5 class="card-title">Innovación</h5>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option2').checked = true;">
+                                <input type="radio" name="q1" value="luminaria" id="option2" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-paint-brush card-img-top responsive-icon" style="font-size: 50px;" title="Creatividad"></i>
+                                    <h5 class="card-title">Creatividad</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option3').checked = true;">
+                                <input type="radio" name="q1" value="nova" id="option3" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-chart-line card-img-top responsive-icon" style="font-size: 50px;" title="Análisis"></i>
+                                    <h5 class="card-title">Análisis</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option4').checked = true;">
+                                <input type="radio" name="q1" value="salus" id="option4" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-heart card-img-top responsive-icon" style="font-size: 50px;" title="Cuidado"></i>
+                                    <h5 class="card-title">Cuidado</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+               <!-- PREGUNTA 2 -->
+                <div class="form-group pregunta" style="display:none">
+                    <label id="preguntaTrivia">¿Cuál es tu pasatiempo favorito?</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('lectura').checked = true;">
+                                <input type="radio" name="q2" value="athena" id="lectura" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-book card-img-top responsive-icon" style="font-size: 50px;" title="Lectura"></i>
+                                    <h5 class="card-title">Lectura</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('deporte').checked = true;">
+                                <input type="radio" name="q2" value="luminaria" id="deporte" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-futbol card-img-top responsive-icon" style="font-size: 50px;" title="Deporte"></i>
+                                    <h5 class="card-title">Deporte</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('musica').checked = true;">
+                                <input type="radio" name="q2" value="nova" id="musica" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-music card-img-top responsive-icon" style="font-size: 50px;" title="Música"></i>
+                                    <h5 class="card-title">Música</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('arte').checked = true;">
+                                <input type="radio" name="q2" value="salus" id="arte" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-palette card-img-top responsive-icon" style="font-size: 50px;" title="Arte"></i>
+                                    <h5 class="card-title">Arte</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 3 -->
+                <div class="form-group pregunta" style="display:none">
+                    <label id="preguntaTrivia">Si tuvieras que elegir un color que te represente, ¿cuál sería?</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option1').checked = true;">
+                                <input type="radio" name="q3" value="athena" id="option1" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-circle responsive-icon" style="color: #ADD8E6; font-size: 50px;" title="Azul claro"></i>
+                                    <h5 class="card-title">Azul claro</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option2').checked = true;">
+                                <input type="radio" name="q3" value="luminaria" id="option2" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-circle responsive-icon" style="color: #8B0000; font-size: 50px;" title="Rojo oscuro"></i>
+                                    <h5 class="card-title">Rojo oscuro</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option3').checked = true;">
+                                <input type="radio" name="q3" value="nova" id="option3" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-circle responsive-icon" style="color: #006400; font-size: 50px;" title="Verde oscuro"></i>
+                                    <h5 class="card-title">Verde oscuro</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option4').checked = true;">
+                                <input type="radio" name="q3" value="salus" id="option4" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-circle responsive-icon" style="color: #90EE90; font-size: 50px;" title="Verde claro"></i>
+                                    <h5 class="card-title">Verde claro</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- PREGUNTA 4 -->
+                <div class="form-group pregunta" style="display:none">
+                    <label id="preguntaTrivia">¿Qué tipo de proyectos te emocionan más?</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option1').checked = true;">
+                                <input type="radio" name="q4" value="athena" id="option1" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-laptop-code responsive-icon" style="font-size: 50px;" title="Innovaciones tecnológicas"></i>
+                                    <h5 class="card-title">Innovaciones tecnológicas</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option2').checked = true;">
+                                <input type="radio" name="q4" value="luminaria" id="option2" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-paint-brush responsive-icon" style="font-size: 50px;" title="Creaciones artísticas"></i>
+                                    <h5 class="card-title">Creaciones artísticas</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option3').checked = true;">
+                                <input type="radio" name="q4" value="nova" id="option3" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-file-person responsive-icon"style="font-size: 50px;" title="Análisis de sistemas sociales"></i>
+                                    <h5 class="card-title">Análisis de sistemas sociales</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option4').checked = true;">
+                                <input type="radio" name="q4" value="salus" id="option4" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-hospital responsive-icon" style="font-size: 50px;" title="Proyectos de salud comunitaria"></i>
+                                    <h5 class="card-title">Proyectos de salud comunitaria</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- PREGUNTA 5 -->
+                <div class="form-group pregunta" style="display:none">
+                    <label id="preguntaTrivia">¿Con qué animal te sientes más identificado?</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option1').checked = true;">
+                                <input type="radio" name="q5" value="athena" id="option1" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-feather responsive-icon" style="font-size: 50px;" title="Águila"></i>
+                                    <h5 class="card-title">Águila</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option2').checked = true;">
+                                <input type="radio" name="q5" value="luminaria" id="option2" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-fire responsive-icon" style="font-size: 50px;" title="Fénix"></i>
+                                    <h5 class="card-title">Fénix</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option3').checked = true;">
+                                <input type="radio" name="q5" value="nova" id="option3" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-paw responsive-icon" style="font-size: 50px;" title="León"></i>
+                                    <h5 class="card-title">León</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option4').checked = true;">
+                                <input type="radio" name="q5" value="salus" id="option4" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-swimmer responsive-icon" style="font-size: 50px;" title="Cisne"></i>
+                                    <h5 class="card-title">Cisne</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- PREGUNTA 6 -->
+                <div class="form-group pregunta" style="display:none">
+                    <label id="preguntaTrivia">¿Qué cualidad aprecias más en tus amigos?</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option1').checked = true;">
+                                <input type="radio" name="q6" value="athena" id="option1" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-question responsive-icon" style="font-size: 50px;" title="Curiosidad"></i>
+                                    <h5 class="card-title">Curiosidad</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option2').checked = true;">
+                                <input type="radio" name="q6" value="luminaria" id="option2" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-lightbulb responsive-icon" style="font-size: 50px;" title="Imaginación"></i>
+                                    <h5 class="card-title">Imaginación</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option3').checked = true;">
+                                <input type="radio" name="q6" value="nova" id="option3" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-comments responsive-icon" style="font-size: 50px;" title="Crítica constructiva"></i>
+                                    <h5 class="card-title">Crítica constructiva</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('option4').checked = true;">
+                                <input type="radio" name="q6" value="salus" id="option4" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-heart responsive-icon" style="font-size: 50px;" title="Compasión"></i>
+                                    <h5 class="card-title">Compasión</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- PREGUNTA 7 -->
+                <div class="form-group pregunta" style="display:none">
+                    <label id="preguntaTrivia">¿Qué área de estudio te atrae más?</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('ciencias-tecnologia').checked = true;">
+                                <input type="radio" name="q7" value="athena" id="ciencias-tecnologia" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-flask responsive-icon" style="font-size: 50px;" title="Ciencias y tecnología"></i>
+                                    <h5 class="card-title">Ciencias y tecnología</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('artes-humanidades').checked = true;">
+                                <input type="radio" name="q7" value="luminaria" id="artes-humanidades" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-paint-brush responsive-icon" style="font-size: 50px;" title="Artes y humanidades"></i>
+                                    <h5 class="card-title">Artes y humanidades</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('ciencias-sociales').checked = true;">
+                                <input type="radio" name="q7" value="nova" id="ciencias-sociales" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-users responsive-icon" style="font-size: 50px;" title="Ciencias sociales"></i>
+                                    <h5 class="card-title">Ciencias sociales</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('salud-bienestar').checked = true;">
+                                <input type="radio" name="q7" value="salus" id="salud-bienestar" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-heartbeat responsive-icon" style="font-size: 50px;" title="Salud y bienestar"></i>
+                                    <h5 class="card-title">Salud y bienestar</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PREGUNTA 8 -->
+                <div class="form-group pregunta" style="display:none">
+                    <label id="preguntaTrivia">¿Qué frase te motiva más?</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('innovacion').checked = true;">
+                                <input type="radio" name="q8" value="athena" id="innovacion" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-lightbulb responsive-icon" style="font-size: 50px;" title="Innovación"></i>
+                                    <h5 class="card-title">"La innovación es la clave del progreso"</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('creatividad').checked = true;">
+                                <input type="radio" name="q8" value="luminaria" id="creatividad" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-paint-brush responsive-icon" style="font-size: 50px;" title="Creatividad"></i>
+                                    <h5 class="card-title">"La creatividad es la chispa de la vida"</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('analisis').checked = true;">
+                                <input type="radio" name="q8" value="nova" id="analisis" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-search responsive-icon" style="font-size: 50px;" title="Análisis"></i>
+                                    <h5 class="card-title">"El análisis es el primer paso para el cambio"</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('cuidado-compasion').checked = true;">
+                                <input type="radio" name="q8" value="salus" id="cuidado-compasion" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-hands-helping responsive-icon" style="font-size: 50px;" title="Cuidado y compasión"></i>
+                                    <h5 class="card-title">"El cuidado y la compasión son la base de una sociedad"</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 9 -->
+                <div class="form-group pregunta" style="display:none">
+                    <label id="preguntaTrivia">¿Cuál es tu enfoque cuando enfrentas un desafío?</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('resolver-logica').checked = true;">
+                                <input type="radio" name="q9" value="athena" id="resolver-logica" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-calculator responsive-icon" style="font-size: 50px;" title="Resolver con lógica"></i>
+                                    <h5 class="card-title">Resolverlo con lógica</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('solucion-creativa').checked = true;">
+                                <input type="radio" name="q9" value="luminaria" id="solucion-creativa" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-lightbulb responsive-icon" style="font-size: 50px;" title="Solución creativa"></i>
+                                    <h5 class="card-title">Buscar una solución creativa</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('analizar-consecuencias').checked = true;">
+                                <input type="radio" name="q9" value="nova" id="analizar-consecuencias" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-exclamation-triangle responsive-icon" style="font-size: 50px;" title="Analizar consecuencias"></i>
+                                    <h5 class="card-title">Analizar las posibles consecuencias</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('considerar-bienestar').checked = true;">
+                                <input type="radio" name="q9" value="salus" id="considerar-bienestar" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-users responsive-icon" style="font-size: 50px;" title="Considerar bienestar"></i>
+                                    <h5 class="card-title">Considerar el bienestar de todos los involucrados</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA 10 -->
+                <div class="form-group pregunta" style="display:none">
+                    <label id="preguntaTrivia">¿Qué es lo que más valoras en una comunidad?</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('progreso-innovacion').checked = true;">
+                                <input type="radio" name="q10" value="athena" id="progreso-innovacion" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-chart-line responsive-icon" style="font-size: 50px;" title="Progreso e innovación"></i>
+                                    <h5 class="card-title">Progreso e innovación</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('expresion-diversidad').checked = true;">
+                                <input type="radio" name="q10" value="luminaria" id="expresion-diversidad" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-palette responsive-icon" style="font-size: 50px;" title="Expresión y diversidad"></i>
+                                    <h5 class="card-title">Expresión y diversidad</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('liderazgo-cooperacion').checked = true;">
+                                <input type="radio" name="q10" value="nova" id="liderazgo-cooperacion" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-users-cog responsive-icon" style="font-size: 50px;" title="Liderazgo y cooperación"></i>
+                                    <h5 class="card-title">Liderazgo y cooperación</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card radio-option" onclick="document.getElementById('cuidado-salud').checked = true;">
+                                <input type="radio" name="q10" value="salus" id="cuidado-salud" class="d-none">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-hands responsive-icon" style="font-size: 50px;" title="Cuidado mutuo"></i>
+                                    <h5 class="card-title">Cuidado mutuo y salud</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Mensaje final -->
+                <div id="resultadoFinal" style="display:none; text-align: center;">
+                    <h2>¡Tu casa es: <span id="casaResultado"></span>!</h2>
+                    <img id="imagenCasa" src="" alt="Imagen de la casa" style="max-width: 150px; height: auto; margin: 10px 0;"/>
+                    <button id="goToFeedBtn" style="margin-top: 10px;">Ir al feed</button>
+                </div>
+
+
+
+                <!-- Botón para avanzar -->
+                <button type="button" id="siguienteBtn" class="btn btn-primary">Siguiente</button>
+
+            </div>
+
+
+
+            
+        </div>
+        
+    </div>
+
+    
+
+    
+  <!-- APP -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script> 
+
+  <!-- FIREBASE - AUTENTICACION -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+  <!-- CDN Firebase database -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+   
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- SCRIPT -->
+    <script type="module" src="../js/config.js"></script>
+    <script type="module" src="../js/trivia.js"></script>
+    
+    
+
+
+</body>
+</html>

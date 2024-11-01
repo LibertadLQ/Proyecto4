@@ -1,0 +1,397 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-image: url('../img/fondos/puertafantasia.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay{
+    position: fixed;
+    background-color: rgba(71, 52, 27, 0.466) ;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.container {
+
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3rem; /* Tamaño grande para el título */
+    font-weight: bold; /* Negrita para resaltar */
+    color: #ffffff; /* Color blanco para el texto */
+    text-shadow: 
+        0 0 15px rgba(255, 196, 0, 0.9), /* Brillo más fuerte */
+        0 0 30px rgba(255, 196, 0, 0.7), /* Más brillo */
+        0 0 45px rgba(255, 196, 0, 0.5); /* Aún más brillo */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    transition: transform 0.4s ease, text-shadow 0.4s ease; /* Transiciones suaves para el efecto hover */
+}
+
+h1:hover{
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    text-shadow: 
+        0 0 25px rgba(255, 196, 0, 1), /* Brillo intenso */
+        0 0 50px rgba(255, 196, 0, 0.8), /* Más brillo intenso */
+        0 0 75px rgba(255, 196, 0, 0.6); /* Aún más brillo intenso */
+}
+
+
+
+
+
+
+/*INSTRUCCION*/
+p {
+    color: #ffffff; /* Texto blanco */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(173, 216, 230, 0.4); /* Efecto de brillo */
+    font-size: 1.5rem; /* Tamaño de texto */
+    margin-bottom: 2rem; /* Espacio inferior */
+    font-size: 30px;
+}
+
+.text-center {
+    text-align: center; /* Centra el texto */
+}
+
+
+/*PREGUNTA*/
+.pregunta {
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgba(255, 95, 2, 0.171); /* Fondo suave con opacidad */
+    box-shadow: 0 0 20px rgba(223, 142, 75, 0.5); /* Sombra difusa para un efecto de profundidad */
+}
+
+.pregunta label {
+    font-size: 1.5rem;
+    color: #ffffff; /* Texto blanco */
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(209, 159, 97, 1), 0 0 16px ; /* Efecto de brillo */
+    display: block; /* Asegura que el label ocupe toda la línea */
+    margin-bottom: 10px; /* Espacio entre el label y los inputs */
+}
+
+.pregunta input[type="radio"] {
+    accent-color: #b85729; /* Color del radio */
+    margin-right: 10px;
+    transform: scale(1.3); /* Escala para un mejor tamaño visual */
+    transition: transform 0.3s; /* Suaviza el efecto al interactuar */
+}
+
+.pregunta input[type="radio"]:hover {
+    transform: scale(1.4); /* Aumenta el tamaño al pasar el mouse */
+}
+
+.pregunta img {
+    border: 3px solid #b85729; /* Borde colorido */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+
+
+
+
+
+
+
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(2, auto); /* Dos filas */
+    gap: 20px; /* Espacio entre las opciones */
+    margin: 20px 0; 
+    padding: 20px; 
+    background-color: #f4f1e1; /* Fondo suave similar a pergamino */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+.radio-option {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar contenido */
+    padding: 15px; 
+    border: 2px solid transparent; /* Borde inicial transparente */
+    border-radius: 10px; 
+    background-color: #fff; /* Fondo blanco para opciones */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones suaves */
+    cursor: pointer;
+}
+.radio-option:hover {
+    background-color: #ffd700; /* Color dorado al pasar el mouse */
+    transform: translateY(-2px); /* Elevar un poco al pasar el mouse */
+}
+.radio-option input {
+    margin-right: 10px;
+    accent-color: #6b4f3a; /* Cambia el color de los radios */
+    transform: scale(1.5); /* Aumentar el tamaño del radio */
+}
+
+.radio-option span {
+    font-size: 16px;
+    color: #4a3e36; /* Color de texto oscuro y cálido */
+    font-family: 'Garamond', serif; /* Fuente con estilo clásico */
+    transition: color 0.3s;
+}
+.radio-option:hover span {
+    color: #6b4f3a; /* Cambia el color del texto al pasar el mouse */
+}
+
+.radio-option.selected span {
+    font-weight: bold; /* Negrita para opciones seleccionadas */
+    color: #ffd700; /* Color dorado para la opción seleccionada */
+}
+
+
+
+
+
+#siguienteBtn {
+    background-color: #ffb347;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+#siguienteBtn:hover {
+    background-color: #ff9944;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff8e7;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #b85729;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: #f56d50;
+    cursor: pointer;
+}
+
+
+
+
+#resultadoFinal h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px #633b0a;
+    text-align: center;
+}
+
+#resultadoFinal button {
+    background-color: #b85729;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#resultadoFinal button:hover {
+    background-color: #ff9944;
+    cursor: pointer;
+}
+
+#warningMessage {
+    font-size: 1rem;
+    color: #d9534f;
+}
+
+ul{
+    font-size: 5px
+}
+
+
+
+.radio-option:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
+}
+.radio-option {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent; /* Asegura que haya un borde por defecto */
+}
+
+.radio-option.selected {
+    background-color: rgba(255, 223, 186, 0.5); /* Color de fondo al seleccionar */
+    border: 1px solid #ff9800; /* Borde al seleccionar para mayor claridad */
+}
+
+
+
+
+
+/* Estilos para el mensaje final */
+#resultadoFinal {
+    display: none; /* Oculto por defecto */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc; /* Borde ligero para el contenedor */
+    border-radius: 8px; /* Esquinas redondeadas */
+    background-color: #bb6c06a8; /* Color de fondo suave */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilo de la imagen */
+#imagenCasa {
+    max-width: 150px; /* Ancho máximo de la imagen */
+    height: auto; /* Mantener la proporción */
+    margin: 10px 0; /* Espacio arriba y abajo de la imagen */
+}
+
+/* Estilo del botón */
+#goToFeedBtn {
+    margin-top: 10px; /* Espacio arriba del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #fff; /* Color del texto */
+    background-color: #7c5d09; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+/* Cambiar color de fondo del botón al pasar el mouse */
+#goToFeedBtn:hover {
+    background-color: #412807; /* Color de fondo al pasar el mouse */
+}
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    .text-center{
+        font-size: 26px;
+        margin: 2px;
+        padding: 0px;
+    }
+
+    .container {
+
+        padding: 10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    body{
+        padding: 0px;
+        margin: 0px;
+    }
+    .col-md-3 {
+        flex: 0 0 50%; /* Cambia a 50% en pantallas pequeñas para dos columnas */
+        max-width: 50%;
+    }
+    
+    .card-title{
+        font-size: 14px;
+    }
+    
+    #imagenCasa {
+        max-width: 100px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    #goToFeedBtn {
+        font-size: 14px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+        padding: 8px 16px; /* Espaciado interno más pequeño */
+    }
+
+    
+
+    .magic-background h1 {
+        font-size: 1.5em; /* Ajusta el tamaño de fuente */
+    }
+
+    .magic-background p {
+        font-size: 1em; /* Ajusta el tamaño de fuente */
+    }
+
+    /* Reduce el tamaño de la pregunta */
+    #preguntaTrivia {
+        font-size: 1.2em; /* Ajusta el tamaño de la pregunta en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .magic-background h1 {
+        font-size: 1.2em; /* Aún más pequeño para pantallas muy pequeñas */
+    }
+
+    .magic-background p {
+        font-size: 0.9em; /* Aún más pequeño para pantallas muy pequeñas */
+    }
+
+    /* Reduce aún más el tamaño de la pregunta */
+    #preguntaTrivia {
+        font-size: 1em; /* Ajusta el tamaño de la pregunta en pantallas muy pequeñas */
+    }
+
+    .card {
+        margin-bottom: 5px; /* Espacio entre las tarjetas */
+    }
+}

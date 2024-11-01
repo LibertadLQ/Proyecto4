@@ -1,0 +1,298 @@
+/* Estilo adicional para el fondo de la página */
+body {
+    background-image: url('../img/fondos/puertafantasia.jpg'); /* Cambia 'ruta/de/tu/imagen.jpg' por la ruta de tu imagen */
+    background-size: cover; /* La imagen cubrirá todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen se mantenga fija al hacer scroll */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #4B3B2F; /* Marrón oscuro para el texto principal */
+    padding: 20px; /* Espaciado vertical */
+    margin: 10px; /* Elimina el margen superior */
+
+}
+
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 52, 27, 0.466); /* Un overlay blanco semitransparente para suavizar la imagen */
+    pointer-events: none; /* Permite interactuar con el contenido normalmente */
+}
+
+/* Estilo general para las cards */
+.carousel-item {
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+/* TITULO */
+h1.display-4 {
+    font-size: 40px; /* Tamaño ajustado para mejor responsividad */
+    font-weight: bold; /* Negrita para resaltar */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #ffffff; /* Color blanco para el texto */
+    text-shadow: 
+        0 0 15px rgba(255, 196, 0, 0.9), /* Brillo más fuerte */
+        0 0 30px rgba(255, 196, 0, 0.7), /* Más brillo */
+        0 0 45px rgba(255, 196, 0, 0.5); /* Aún más brillo */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    transition: transform 0.4s ease, text-shadow 0.4s ease; /* Transiciones suaves para el efecto hover */
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* Efecto hover para el título */
+h1.display-4:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    text-shadow: 
+        0 0 25px rgba(255, 196, 0, 1), /* Brillo intenso */
+        0 0 50px rgba(255, 196, 0, 0.8), /* Más brillo intenso */
+        0 0 75px rgba(255, 196, 0, 0.6); /* Aún más brillo intenso */
+}
+
+/* CARDS */
+/* Centrado y tamaño de las cards */
+.card {
+    margin: 0 auto; /* Centra la card */
+    max-width: 85%; /* Ajusta el tamaño de las cards */
+    height: auto; /* Mantiene la proporción de las cards */
+    overflow: visible; /* Asegura que el contenido no se salga del card */
+    background-color: rgba(100, 77, 64, 0.7); /* Fondo marrón oscuro semitransparente */
+    color: white; /* Color de texto dentro de la card */
+    border-radius: 15px; /* Bordes redondeados para suavizar el diseño */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px; /* Espacio superior para las cards */
+}
+
+
+
+/* Efecto hover para las cards */
+.card:hover {
+    transform: scale(1.05); /* Efecto de ampliación al hacer hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+
+/* Cambia el color del encabezado de las cards */
+.card-header {
+    background-color: #dbd7c9; /* Fondo del encabezado */
+    color: #644d40; /* Color del texto */
+    font-weight: bold;
+    font-size: 8px; /* Reduce este valor para achicar el tamaño del texto */
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total */
+    padding: 5px; /* Reduce el padding para achicar el encabezado */
+}
+
+
+.card img {
+    max-height: 260px; /* Ajusta el tamaño máximo para la imagen */
+    width: 90%;
+    object-fit: cover;
+}
+
+.card-text {
+    font-size: 10px; /* Ajusta el tamaño según tu preferencia */
+}
+
+.card-title.text-center{
+    font-size: 14px;
+}
+
+li{
+    font-size: 13px;
+}
+
+/* Estilos específicos para cada casa */
+#header-titulo-a, #header-titulo-b, #header-titulo-c, #header-titulo-d {
+    font-size: 14px; /* Tamaño de fuente ajustado */
+    color: #532c0c; /* Texto blanco */
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+#carrusel-a .card, #carrusel-b .card, #carrusel-c .card, #carrusel-d .card {
+    background-color: rgba(247, 136, 62, 0.85); /* Fondo naranja semitransparente */
+    border: none; /* Eliminar bordes */
+}
+
+#carrusel-a .card-body {
+    background-color: rgba(83, 44, 12, 0.8); /* Color suave para el cuerpo de la card */
+}
+
+/* Sombra de la siguiente card */
+.carousel-item-next,
+.carousel-item-prev {
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Transición suave */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Controles del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+/* Ajustes para las flechas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(75, 59, 47, 0.7); /* Marrón translúcido para las flechas */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+/* Estilo para el botón de salida */
+
+#logout-button {
+    background-color: #ee5f0d; /* Color rojo */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+#logout-button:hover {
+    background-color: #a55e0d; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+/* Estilo para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff; /* Fondo blanco */
+    margin: 15% auto; /* Espacio arriba y centrado */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #a36405; /* Borde gris */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 80%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo */
+}
+
+/* Estilo del ícono en el modal */
+.confirmation-container {
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Espacio abajo */
+}
+
+.confirmation-container i {
+    font-size: 40px; /* Tamaño del ícono */
+    color: #e07b07; /* Color del ícono */
+}
+
+/* Estilo del mensaje de confirmación */
+.confirmation-message {
+    font-size: 20px; /* Tamaño del texto */
+    margin: 10px 0; /* Espacio arriba y abajo */
+}
+
+/* Estilo para el botón de confirmación */
+.btn-confirm {
+    background-color: #c2970c; /* Color verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambiar el cursor */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.btn-confirm:hover {
+    background-color: #4b2f06; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilo para el botón de cerrar en el modal */
+.close {
+    color: #a35c0b; /* Color gris */
+    float: right; /* A la derecha */
+    font-size: 28px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambiar el cursor */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color al pasar el ratón */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambiar el cursor */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animación para el modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h1.display-4 {
+        font-size: 2rem; /* Ajusta el tamaño del título en pantallas pequeñas */
+    }
+
+    .carousel-item {
+        padding: 10px; /* Espaciado adicional para el carrusel */
+    }
+
+    .card {
+        width: 100%; /* Las cards ocupan el 100% en pantallas pequeñas */
+    }
+
+    .modal-content {
+        padding: 20px; /* Espaciado interno reducido para el modal */
+    }
+}
+
+@media (max-width: 576px) {
+    h1.display-4 {
+        font-size: 1.8rem; /* Ajusta el tamaño del título en pantallas muy pequeñas */
+    }
+
+    .button-salida button {
+        width: 100%; /* Botones ocupan el 100% */
+    }
+}

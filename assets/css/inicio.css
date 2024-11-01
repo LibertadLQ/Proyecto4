@@ -1,0 +1,140 @@
+body {
+  background-color: #f6efe7;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+/* Tarjeta de portada */
+.cardPortada {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.portImg{
+  width: 100%; /* Ocupa el 100% del ancho de la tarjeta */
+  height: 130px;
+  object-fit: cover;/*ayuda a recortar la imagen para llenar el espacio */
+}
+
+.post-box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.feed {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Eventos */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+  color: #644d40;
+  font-weight: 600;
+}
+/* Calendario */
+iframe {
+  border-radius: 8px;
+  border: 1px solid #d4bc9e;
+}
+.sidebar {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.friend-list img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.profile-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.profile-section img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-section h5 {
+  margin: 0;
+}
+/* Estilos para el textarea de pensamientos */
+#opinion {
+  background-color: #ffffff; /* Color de fondo del input */
+  color: #000000; /* Color del texto */
+  border: 1px solid #ccc; /* Borde del input */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  width: 100%; /* Ocupa el 100% del ancho */
+}
+
+/* Estilos para el textarea cuando está enfocado */
+#opinion:focus {
+  background-color: #d4bc9e; /* Cambia el fondo cuando está enfocado */
+  border-color: #644d40; /* Cambia el borde cuando está enfocado */
+  box-shadow: 0 0 5px 2px #644d40; /* Cambia el color del sombreado */
+}
+
+/* Estilos para el botón "Publicar" */
+#boton-post {
+  background-color: #dbd7c9; /* Color de fondo de los botones */
+  border: none; /* Sin borde */
+  color: #644d40; /* Color del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+#boton-post:hover {
+  background-color: #d4bc9e; /* Cambia el fondo al pasar el ratón */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+/* Estilos para los botones "Like" y "Comment" */
+#boton-like, #boton-comentario {
+  background-color: transparent; /* Fondo transparente */
+  border: 1px solid #786859; /* Borde con color de la paleta */
+  color: #786859; /* Color del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 14px;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#boton-like:hover, #boton-comentario:hover {
+  background-color: #786859; /* Cambia el fondo al pasar el ratón */
+  color: #ffffff; /* Cambia el color del texto al pasar el ratón */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+/* Estilos para el calendario */
+.calendario {
+  text-align: center;
+}
+
+/* Estilos del footer */
+#footer {
+  margin-top: 20px;
+  min-height: 60px; /* Aumentar la altura del pie de página */
+  background-color: #644d40; /* Color de fondo del pie de página */
+  color: white; /* Color del texto */
+}
+
+#footer-p {
+  text-align: center;
+}

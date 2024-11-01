@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../img/index.png" type="image/png"> <!-- Ruta al favicon PNG -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=logout" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/feed.css">
+</head>
+<body>
+   <!-- Navbar arriba  -->
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">EduConections</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">EduConections</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../html/feed2.html">
+                <i class="bi bi-house-door"></i> Feed
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../html/about-us.html">
+                <i class="bi bi-info-circle"></i> About-us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../html/casas.html">
+                <i class="bi bi-building"></i> Casas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../html/profile.html">
+                <i class="bi bi-person-circle"></i> Profile
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" id="logout-button">
+                <i class="bi bi-box-arrow-right"></i> Salir
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar arriba  -->
+  <br>
+  <div class="banner">
+    <div class="container text-center">
+      <h1 class="banner-title">Bienvenido a Nuestro Mundo Mágico</h1>
+      <p class="banner-text">Explora, comparte y conecta con gente de igual de academica que tú.</p>
+    </div>
+  </div>
+  
+  <br>
+  <!-- Posts y Eventos -->
+  <div class="container mt-4">
+  <div class="row justify-content-center">
+    <!-- Columna de Posts -->
+    <div class="col-lg-6 col-md-8 col-sm-12 mb-4">
+      <!-- Post del usuario -->
+      <div class="post-box mb-4 p-3 border">
+        <div class="d-flex align-items-start mb-3">
+          <img id="userAvatar" src="../img/profilepic.jpeg" class="profile-pic me-3" alt="Profile Picture">
+          <form id="info-form" class="w-100">
+            <textarea type="text" id="opinion" class="form-control" placeholder="Comparte dudas o opiniones"></textarea>
+            <div class="d-flex justify-content-end mt-2">
+              <div class="d-flex align-items-center mt-2">
+                <input class="form-control" type="file" id="formFile" style="display: none;" onchange="updateFileName()">
+                <button type="button" class="btn btn-outline-secondary" id="custom-upload-btn">
+                  <i class="fas fa-upload"></i> Seleccionar archivo
+                </button>
+                <span id="file-name" class="ms-2"></span>
+              </div>
+              <button type="submit" id="boton-post" class="btn btn-primary me-2">
+                <i class="fas fa-paper-plane"></i> Publicar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Feed post -->
+      <div id="totalC" class="totalC">
+        <!-- Aquí se mostrarán los comentarios del usuario -->
+      </div>
+    </div>
+
+    <!-- Columna de Recursos Útiles -->
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Recursos Útiles</h5>
+          <p class="card-text">Accede a materiales y enlaces que te ayudarán en tus estudios.</p>
+          <ul>
+            <li><a href="https://www.khanacademy.org" target="_blank"><strong>Khan Academy</strong></a>: Cursos gratuitos en diversas materias.</li>
+            <li><a href="https://www.coursera.org" target="_blank"><strong>Coursera</strong></a>: Cursos en línea de universidades prestigiosas.</li>
+            <li><a href="https://www.youtube.com/user/khanacademy" target="_blank"><strong>Canal de YouTube de Khan Academy</strong></a>: Tutoriales en video sobre temas académicos.</li>
+          </ul>
+        </div>
+      </div>
+      <br>''
+      <div class="alert alert-info">
+        <strong>Tip:</strong> No olvides visitar la biblioteca de tu universidad para más recursos.
+      </div>
+      
+      <br>
+      <iframe id= "calendario"src="https://calendar.google.com/calendar/embed?height=300&wkst=2&ctz=America%2FLima&bgcolor=%239d6f6f&showTitle=0&showPrint=0&showCalendars=0&showTabs=0&showTz=0&mode=MONTH" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+      <!--  <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=2&ctz=America%2FLima&bgcolor=%239d6f6f&showTitle=0&showPrint=0&showCalendars=0&showTabs=0&showTz=0&mode=MONTH" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>-->
+
+      <div class="mt-4">
+        <!-- Div para mostrar el resultado de la casa o el botón para ir al quiz -->
+        <div id="div-casa" class="container text-center my-5 p-4 border rounded">
+          <!-- Este div será manipulado por el JS de la página principal -->
+        </div>
+      </div>
+    </div> <!-- columna de recursos -->
+  </div> <!-- del row -->
+  </div> <!-- del container -->
+
+
+  <!-- modal para editar el post -->
+  <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form id="editForm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Editar post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="editDocId">
+            <div class="mb-3">
+              <textarea type="text" id="editComentario" class="form-control" required></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Cancelar">Cancelar</button>
+            <button type="submit" class="btn btn-primary" aria-label="Guardar cambios">Guardar Cambios</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer id="footer" class="text py-4">
+    <div class="container text-center">
+        <p id="footer-p" class="mb-0">© 2024 Tu Empresa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- CDN Bootstrap js -->
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+  <!-- CDN jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+   
+  <!-- SCRIPT ../js/casas.js-->
+  <script type="module" src="../js/config.js"></script>
+  <script type="module" src="../js/feed.js"></script>
+</body>
+</html>

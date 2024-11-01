@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+ 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/index.png" type="image/png"> <!-- Ruta al favicon PNG -->
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">EduConections</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">EduConections</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../html/feed.html">
+                <i class="bi bi-house-door"></i> Feed
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/about-us.html">
+                <i class="bi bi-info-circle"></i> About-us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/casas.html">
+                <i class="bi bi-building"></i> Casas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-person-circle"></i> Profile
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="btnLogout">
+                <i class="bi bi-box-arrow-right"></i> Salir
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Espaciador para evitar que el contenido se superponga a la navbar -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <!-- Contenido del Perfil -->
+  <div class="container mt-4">
+    <div class="row justify-content-center text-center mb-4">
+        <!-- Columna Izquierda -->
+        <div class="col-md-4">
+          <div class="profile-container mx-auto mb-3">
+            <img id="userAvatar" src="https://i.pinimg.com/736x/37/02/a2/3702a28ea98faf933c92767cb527a269.jpg" alt="Avatar de usuario" class="rounded-circle" width="100" height="100">
+            <label for="profileImageInput" class="camera-icon">
+                <i class="bi bi-camera-fill"></i>
+            </label>
+            <input type="file" id="profileImageInput" accept="image/*" style="display: none">
+          </div>
+          <h3 id="userName"></h3>
+          <p id="userEmail" class="text-muted"></p>
+
+          <!-- Sección de estadísticas -->
+          <ul class="list-inline about mb-3 d-none" id="profileStats">
+            <li class="list-inline-item"><span id="postCount">4</span> Posts</li>
+            <li class="list-inline-item"><span id="likeCount">32</span> Likes</li>
+            <li class="list-inline-item"><span id="house">Casa</span></li>
+            <li class="list-inline-item" id="description">Descripción: <span id="descriptionDisplay" class="d-none">No especificado</span></li>
+          </ul>
+        
+          <div>
+            <span id="birthdateLabel" class="me-2">Fecha de Nacimiento:</span>
+            <span id="birthdateDisplay" class="d-none birthdate-class">No especificado</span>
+          </div>
+        
+          <div id="socialIcons" class="mt-2">
+            <span class="me-2">Redes Sociales:</span>
+            <span id="instagramDisplay" class="d-none"><a id="instagramLink" href="#" target="_blank"><i class="bi bi-instagram"></i></a></span>
+            <span id="linkedinDisplay" class="d-none"><a id="linkedinLink" href="#" target="_blank"><i class="bi bi-linkedin"></i></a></span>
+          </div>
+        </div>
+
+      <!-- Columna Derecha -->
+      <div class="col-md-8">
+        <button class="btn btn-primary float-end" id="editarPerfil" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+          <i class="bi bi-gear-fill"></i>
+        </button>
+
+        <!-- Carrusel de Frases -->
+        <div id="carouselExampleRide" class="carousel slide mb-4" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/carrusel/1.jpeg" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/carrusel/2.jpeg" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/carrusel/3.jpeg" class="d-block w-100" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/carrusel/4.jpeg" class="d-block w-100" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/carrusel/5.jpeg" class="d-block w-100" alt="Image 5">
+            </div>
+          </div>
+          
+          <!-- Botones de navegación del carrusel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resultado de la Casa Asignada -->
+    <div id="resultadoCasa" class="d-none mb-4">
+      <h2>Casa Asignada:</h2>
+      <p id="casaPerfil"></p>
+      <img id="imagenCasaPerfil" src="" alt="Imagen de la casa" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Modal de Edición de Perfil -->
+  <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editProfileModalLabel"><i class="bi bi-gear-fill"></i> Editar Perfil</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editProfileForm">
+            <div class="mb-3">
+              <label for="gender" class="form-label">Género</label>
+              <select class="form-select" id="gender" required>
+                <option value="mujer">Mujer</option>
+                <option value="hombre">Hombre</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="descriptionEdit" class="form-label">Descripción</label>
+              <textarea class="form-control" id="descriptionEdit" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="birthdateEdit" class="form-label">Fecha de Nacimiento</label>
+              <input type="date" class="form-control" id="birthdateEdit" required>
+            </div>
+            <div class="mb-3">
+              <label for="instagramEdit" class="form-label">Instagram</label>
+              <input type="url" class="form-control" id="instagramEdit" required>
+            </div>
+            <div class="mb-3">
+              <label for="linkedinEdit" class="form-label">LinkedIn</label>
+              <input type="url" class="form-control" id="linkedinEdit" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="text-light text-center py-4 mt-4"> <!-- Agregado mt-4 para espaciado superior -->
+    <p class="mb-0">© 2024 EduConections. Todos los derechos reservados.</p>
+  </footer>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script type="module" src="../js/config.js"></script>
+  <script type="module" src="../js/profile.js"></script>
+</body>
+
+</html>
