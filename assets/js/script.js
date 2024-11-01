@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     crowContainer.style.display = 'none';
                     document.querySelector('.register-form').reset();
                     console.log("Registro exitoso. ¡Bienvenido!");
-                    window.location.href = './assets/html/feed.html';
+                    window.location.href = '../html/feed.html';
                 })
                 .catch((error) => {
                     console.error(error);

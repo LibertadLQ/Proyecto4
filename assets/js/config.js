@@ -109,11 +109,6 @@ export function cargarComentariosEnTiempoReal(postId, callback) {
     return onSnapshot(q, callback);
 }
 
-// Función para obtener todos los comentarios de una publicaci
-//export function cargarComentarios(postId) {
-    //return getDocs(query(collection(db, "comentarios"), orderBy("timestamp", "desc")));
-//}
-
 //             FEEED 
 // Función para agregar una post
 export function agregarPost(comentario, imageFile) {
@@ -152,11 +147,7 @@ export function agregarPost(comentario, imageFile) {
 
 export function totalPost() {
     console.log("publicaciones totales");
-    return getDocs(query(collection(db, 'publicaciones'), orderBy("timestamp", "desc")))
-    .then(snapshot => {
-        snapshot.forEach(doc => console.log(doc.data().timestamp));
-        return snapshot;
-    });
+    return getDocs(query(collection(db, 'publicaciones'), orderBy("timestamp", "desc")));
 }
 
 

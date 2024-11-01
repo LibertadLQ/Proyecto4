@@ -306,7 +306,7 @@ footer .social-icons {
 }
 
 footer .social-icons a {
-  font-size: 1.5rem; /* Tamaño de los iconos */
+  font-size: 1.3rem; /* Tamaño de los iconos */
   transition: transform 0.3s; /* Efecto de transformación */
 }
 
