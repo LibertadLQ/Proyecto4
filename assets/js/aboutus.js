@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     logoutButton.addEventListener('click', function () {
         // Lógica para cerrar sesión
         alert('Sesión cerrada.'); // Reemplaza esto con la lógica de cierre de sesión
+        window.location.href = '../../index.html'; 
     });
 
     backButton.addEventListener('click', function () {
